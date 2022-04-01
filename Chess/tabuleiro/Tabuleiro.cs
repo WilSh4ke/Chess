@@ -12,8 +12,6 @@ namespace Chess.tabuleiro
         public int colunas { get; set; }
         
         private Peca[,] pecas;
-        private int v1;
-        private int v2;
 
         public Tabuleiro(int linhas, int colunas, Peca[,] pecas)
         {
@@ -22,11 +20,10 @@ namespace Chess.tabuleiro
             this.pecas = pecas;
             pecas = new Peca[linhas, colunas];
         }
-
-        public Tabuleiro(int v1, int v2)
+        public Peca peca(int linha, int coluna)
         {
-            this.v1 = v1;
-            this.v2 = v2;
-        }
+            return pecas[linha, coluna];
+        } 
+
     }
 }
