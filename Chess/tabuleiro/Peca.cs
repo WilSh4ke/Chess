@@ -13,12 +13,19 @@ namespace Chess.tabuleiro
         public int qteMovimentos { get; set; }
         public  Tabuleiro tab { get; protected set; }
 
-        public Peca(Posicao posisao, Cor cor, int qteMovimentos, Tabuleiro tab)
+
+        public Peca(Cor cor, int qteMovimentos, Tabuleiro tab)
         {
-            Posisao = posisao;
+            Posisao = null;
             Cor = cor;
             this.qteMovimentos = 0;
             this.tab = tab;
+        }
+
+        public Peca(Tabuleiro tab, Cor cor)
+        {
+            this.tab = tab;
+            Cor = cor;
         }
     }
 }

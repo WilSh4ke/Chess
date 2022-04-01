@@ -14,17 +14,20 @@ namespace Chess
                 for(int j=0; j<tab.colunas; j++) { 
                 
                     if(tab.peca(i, j) == null){
-                Console.WriteLine("- ");
+                Console.Write("- ");
             }
             else
             {
-                Console.WriteLine(tab.peca(i, j) + " ");
+                Console.Write(tab.peca(i, j) + " ");
             }
-
-                    Console.WriteLine();
+                    
+                    
                 }
+                Console.WriteLine();
             }
+            
         }
+       
 
     }
 }

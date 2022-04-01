@@ -13,17 +13,21 @@ namespace Chess.tabuleiro
         
         private Peca[,] pecas;
 
-        public Tabuleiro(int linhas, int colunas, Peca[,] pecas)
+        public Tabuleiro(int linhas, int colunas)
         {
             this.linhas = linhas;
             this.colunas = colunas;
-            this.pecas = pecas;
             pecas = new Peca[linhas, colunas];
         }
         public Peca peca(int linha, int coluna)
         {
             return pecas[linha, coluna];
         } 
+        public void colocarPeca(Peca p, Posicao pos)
+        {
+            pecas[pos.linha, pos.coluna] = p;
+            p.Posisao = pos;
+        }
 
     }
 }
