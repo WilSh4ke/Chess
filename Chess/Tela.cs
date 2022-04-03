@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 using Chess.tabuleiro;
+using Chess;
+using xadrez;
+using tabuleiro;
 
 namespace Chess
 {
@@ -18,7 +21,7 @@ namespace Chess
             }
             else
             {
-                Console.Write(tab.peca(i, j) + " ");
+                        Console.Write(tab.peca(i, j) + " ");
             }
                     
                     
@@ -27,6 +30,14 @@ namespace Chess
             }
             Console.WriteLine("  a b c d e f g h");
             
+        }
+
+        public static PosicaoChess lerPosicaoXadrez()
+        {
+            string s = Console.ReadLine();
+            char coluna = s[0];
+            int linha = int.Parse(s[1] + "");
+            return new PosicaoChess(coluna, linha);
         }
        public static void imprimirPeca(Peca peca)
         {
